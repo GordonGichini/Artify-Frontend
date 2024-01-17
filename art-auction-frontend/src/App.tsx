@@ -1,25 +1,30 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Login from './components/auth/login';
+import Register from './components/auth/register';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const Home: React.FC = () => {
+  return <div> Home Page</div>
+}
+
+const NotFound: React.FC = () => {
+  return <div>404 Not Found</div>
+}
+
+
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" Component={Home} />
+        <Route path="/login" Component={Login} />
+        <Route path="/register" Component={Register} />
+        <Route Component={NotFound} />
+      </Routes>
+    </Router>
   );
 }
 

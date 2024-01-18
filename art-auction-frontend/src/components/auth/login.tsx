@@ -17,27 +17,27 @@ const Login: React.FC = () => {
       <div className="w-1/2 p-4 bg-gray-200">
         <div className="grid grid-cols-2 gap-4">
           <img
-            src="/public/images/164333_1627908988 1.png"
+            src="\public\images\crioe.png"
             alt="Artwork 1"
             className="rounded-lg col-span-2"
           />
           <img
-            src="/public/images/56255473_1937401643031861_905627174717882368_n 1.png"
+            src="\public\images\piece-art.png"
             alt="Artwork 2"
             className="rounded-lg row-span-2"
           />
           <img
-            src="/public/images/ArtFrauds 1.png"
+            src="/public/images/ArtFrauds.png"
             alt="Artwork 3"
             className="rounded-lg col-span-2"
           />
           <img
-            src="/public/images/bored-ape-900x449 1.png"
+            src="/public/images/bored-ape.png"
             alt="Artwork 4"
             className="rounded-lg row-span-2"
           />
           <img
-            src="/public/images/Monet-Camille 1.png"
+            src="/public/images/Monet-Camille.png"
             alt="Artwork 5"
             className="rounded-lg col-span-2"
           />

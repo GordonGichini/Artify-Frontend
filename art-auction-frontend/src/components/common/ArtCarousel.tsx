@@ -20,13 +20,13 @@ const ArtCarousel: React.FC = () => {
       <Slider {...settings} className="flex">
         {/* Your individual art cards go here */}
         <div className="w-64 mx-2">
-          <img src="https://via.placeholder.com/300x200" alt="Artwork 1" />
+          <img src="https://images.pexels.com/photos/16842473/pexels-photo-16842473/free-photo-of-people-looking-at-painting-in-art-gallery.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Artwork 1" />
         </div>
         <div className="w-64 mx-2">
-          <img src="https://via.placeholder.com/300x200" alt="Artwork 2" />
+          <img src="https://images.pexels.com/photos/206064/pexels-photo-206064.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Artwork 2" />
         </div>
         <div className="w-64 mx-2">
-          <img src="https://via.placeholder.com/300x200" alt="Artwork 3" />
+          <img src="https://images.pexels.com/photos/3683187/pexels-photo-3683187.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Artwork 3" />
         </div>
         {/* Add more art cards as needed */}
       </Slider>

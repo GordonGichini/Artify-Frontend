@@ -1,6 +1,6 @@
 import React from 'react';
-import SellerArtworkForm from './SellerArtworkForm';
-import SellerBidInformation from './SellerBidInformation';
+import SellerArtworkForm from './Seller/SellerArtworkForm';
+import SellerBidInformation from './Seller/SellerBidInformation';
 import Sidebar from '../common/Sidebar';
 
 const SellerDashboard: React.FC = () => {
@@ -21,7 +21,7 @@ const SellerDashboard: React.FC = () => {
     <div>
       <h2>Seller Dashboard</h2>
       <div className="flex">
-        <Sidebar />
+        <Sidebar persona="seller" />
         <div>
           <button onClick={() => setActiveComponent('artworkForm')}>Create/Edit Artwork</button>
           <button onClick={() => setActiveComponent('bidInformation')}>Bid Information</button>

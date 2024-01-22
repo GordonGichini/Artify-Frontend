@@ -7,6 +7,11 @@ import Sidebar from './components/common/Sidebar';
 import Header from './components/common/Header';
 import ArtCarousel from './components/common/ArtCarousel';
 import AdminDashboard from './components/dashboard/AdminDashboard';
+import UserManagement from './components/dashboard/Admin/UserManagement';
+import BiddingManagement from './components/dashboard/Admin/BiddingManagement';
+import CategoryManagement from './components/dashboard/Admin/CategoryManagement'; 
+import ProductManagement from './components/dashboard/Admin/ProductManagement';
+import SendUpdates from './components/dashboard/Admin/SendUpdates';
 import BidderDashboard from './components/dashboard/BidderDashboard';
 import SellerDashboard from './components/dashboard/SellerDashboard';
 import './App.css';
@@ -34,7 +39,7 @@ const App: React.FC = () => {
         <Route path="/" Component={Home} />
         <Route path="/login" Component={Login} />
         <Route path="/register" Component={Register} />
-        <Route path="/dashboard/admin" Component={AdminDashboard} /> 
+        <Route path="/dashboard/admin" Component={AdminDashboard} />  
         <Route path="/dashboard/bidder" Component={BidderDashboard} />
         <Route path="/dashboard/seller" Component={SellerDashboard} />
         <Route Component={NotFound} />

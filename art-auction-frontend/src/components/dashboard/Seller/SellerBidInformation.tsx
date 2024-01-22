@@ -1,4 +1,3 @@
-// SellerBidInformation.tsx
 import React from 'react';
 
 const SellerBidInformation: React.FC = () => {

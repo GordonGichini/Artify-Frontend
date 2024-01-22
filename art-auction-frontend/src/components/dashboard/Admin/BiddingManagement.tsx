@@ -1,4 +1,3 @@
-// BiddingManagement.tsx
 import React from 'react';
 
 interface Auction {

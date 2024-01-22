@@ -1,4 +1,3 @@
-// SendUpdates.tsx
 import React, { useState } from 'react';
 
 const SendUpdates: React.FC = () => {

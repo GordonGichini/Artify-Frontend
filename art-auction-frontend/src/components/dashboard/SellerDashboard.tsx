@@ -19,7 +19,7 @@ const SellerDashboard: React.FC = () => {
   
  
   return (
-    <div>
+    <div className="mx-auto p-8 max-w-screen-lg">
       <h2>Seller Dashboard</h2>
       <div className="flex">
         <Sidebar persona="seller" />

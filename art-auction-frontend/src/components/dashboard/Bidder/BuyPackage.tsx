@@ -1,12 +1,12 @@
 import React from 'react';
-import { useStripe } from '@stripe/react-stripe-js';
+//import { useStripe } from '@stripe/react-stripe-js';
 
 interface BuyPackageProps {
   // Define the necessary props for buying a package
 }
 
 const BuyPackage: React.FC<BuyPackageProps> = ({ /* Pass necessary props */ }) => {
-  const stripe = useStripe();
+ // const stripe = useStripe();
 
   const handleBuyPackage = async () => {
     // Implement logic to initiate payment with Stripe

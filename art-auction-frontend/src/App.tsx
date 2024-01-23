@@ -3,9 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './components/auth/login';
 import Register from './components/auth/register';
 import Navbar from './components/common/Navbar';
-import Sidebar from './components/common/Sidebar';
-import Header from './components/common/Header';
-import ArtCarousel from './components/common/ArtCarousel';
+import Homepage from './components/Homepage';
 import AdminDashboard from './components/dashboard/AdminDashboard';
 import UserManagement from './components/dashboard/Admin/UserManagement';
 import BiddingManagement from './components/dashboard/Admin/BiddingManagement';
@@ -15,15 +13,9 @@ import SendUpdates from './components/dashboard/Admin/SendUpdates';
 import BidderDashboard from './components/dashboard/BidderDashboard';
 import SellerDashboard from './components/dashboard/SellerDashboard';
 import './App.css';
-import SearchCard from './components/common/SearchCard';
 
-const Home: React.FC = () => {
-  return (
-    <div>
-   <div> Home Page</div>
-  </div>
-  );
-}
+
+
 
 const NotFound: React.FC = () => {
   return <div>404 Not Found</div>
@@ -36,7 +28,7 @@ const App: React.FC = () => {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" Component={Home} />
+        <Route path="/" Component={Homepage} />
         <Route path="/login" Component={Login} />
         <Route path="/register" Component={Register} />
         <Route path="/dashboard/admin" Component={AdminDashboard} />  
@@ -44,11 +36,6 @@ const App: React.FC = () => {
         <Route path="/dashboard/seller" Component={SellerDashboard} />
         <Route Component={NotFound} />
       </Routes>
-      <Header />
-      <SearchCard />
-      <ArtCarousel />
-      <ArtCarousel />
-      <ArtCarousel />
     </Router>
   );
 }

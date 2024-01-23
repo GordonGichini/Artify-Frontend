@@ -13,7 +13,7 @@ const SellerArtworkForm: React.FC = () => {
 
   return (
     <div>
-      <h3>Create/Edit Artwork</h3>
+      <h3>Create Artwork</h3>
 
       {/* Artwork Form */}
       <form onSubmit={(e) => { e.preventDefault(); handleArtworkSubmit({/* form data */}); }}>

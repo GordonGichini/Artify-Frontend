@@ -1,4 +1,5 @@
 import React from 'react';
+import Sidebar from '../../common/Sidebar';
 
 interface Auction {
   id: number;
@@ -22,6 +23,7 @@ const BiddingManagement: React.FC = () => {
   return (
     <div>
       <h2>Bidding Management</h2>
+      <Sidebar persona="admin" />
       <ul>
         {auctions.map((auction) => (
           <li key={auction.id}>

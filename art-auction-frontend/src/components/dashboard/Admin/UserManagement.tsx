@@ -1,4 +1,5 @@
 import React from 'react';
+import Sidebar from '../../common/Sidebar';
 
 const UserManagement: React.FC = () => {
   const users = [
@@ -24,6 +25,7 @@ const UserManagement: React.FC = () => {
 
   return (
     <div>
+      <Sidebar persona="admin" />
       <h2>User Management</h2>
       <ul>
         {users.map((user) => (

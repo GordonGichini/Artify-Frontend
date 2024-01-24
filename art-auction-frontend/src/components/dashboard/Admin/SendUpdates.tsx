@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Sidebar from '../../common/Sidebar';
 
 const SendUpdates: React.FC = () => {
   const [selectedUsers, setSelectedUsers] = useState<string[]>([]);
@@ -20,6 +21,7 @@ const SendUpdates: React.FC = () => {
   return (
     <div>
       <h2>Send Updates</h2>
+      <Sidebar persona="admin" />
       <div>
         <label>Select User Type:</label>
         <select onChange={(e) => handleUserSelection(e.target.value)}>

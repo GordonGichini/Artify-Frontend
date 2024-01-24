@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Sidebar from '../../common/Sidebar';
 
 const CategoryManagement: React.FC = () => {
   const [categories, setCategories] = useState<string[]>(['Painting', 'Sculpture', 'Photography']);
@@ -29,6 +30,7 @@ const CategoryManagement: React.FC = () => {
   return (
     <div>
       <h2>Category Management</h2>
+      <Sidebar persona="admin" />
       <ul>
         {categories.map((category, index) => (
           <li key={index}>

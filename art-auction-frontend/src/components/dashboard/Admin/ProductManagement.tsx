@@ -1,4 +1,5 @@
 import React from 'react';
+import Sidebar from '../../common/Sidebar';
 
 const ProductManagement: React.FC = () => {
   const products = [
@@ -25,6 +26,7 @@ const ProductManagement: React.FC = () => {
   return (
     <div>
       <h2>Product Management</h2>
+      <Sidebar persona="admin" />
       <ul>
         {products.map((product) => (
           <li key={product.id}>

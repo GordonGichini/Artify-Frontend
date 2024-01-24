@@ -52,6 +52,7 @@ const App: React.FC = () => {
         <Route path="/dashboard/bidder/my-wins" Component={BidderDashboard} />
         <Route path="/dashboard/bidder/my-orders" Component={BidderDashboard} />
         <Route path="/dashboard/bidder/notifications" Component={BidderDashboard} />
+        <Route path="/dashboard/seller" Component={SellerDashboard} />
         <Route path="/dashboard/seller/add-artwork" Component={SellerDashboard} />
         <Route path="/dashboard/seller/my-artwork" Component={SellerDashboard} />
         <Route path="/dashboard/seller/closed-bids" Component={SellerDashboard} />

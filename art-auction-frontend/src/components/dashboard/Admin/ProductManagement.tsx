@@ -1,42 +1,74 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Sidebar from '../../common/Sidebar';
 
 const ProductManagement: React.FC = () => {
-  const products = [
-    { id: 1, name: 'Artwork 1', category: 'Painting', startingPrice: 100 },
-    { id: 2, name: 'Artwork 2', category: 'Sculpture', startingPrice: 150 },
+  const [products, setProducts] = useState([
+    { id: 1, name: 'Monalisa', category: 'Painting', startingPrice: 1000 },
+    { id: 2, name: 'Bored Ape', category: 'Digital Art', startingPrice: 1050 },
+    { id: 2, name: 'Martin Luther', category: 'Sculpture', startingPrice: 150 },
+    { id: 2, name: 'Art By Don', category: 'Drawing', startingPrice: 550 },
+    { id: 2, name: 'Kreative Arts', category: 'Photography', startingPrice: 150 },
+    { id: 2, name: 'Vasco Da Gama', category: 'Sculpture', startingPrice: 750 }
     // Add more mock product data or fetch from the backend
-  ];
+  ]);
+
+  const navigate = useNavigate();
 
   const handleViewProduct = (productId: number) => {
     // Implement logic to view product details
-    console.log(`Viewing details of product with ID ${productId}`);
+    navigate(`/product/${productId}`)
   };
 
   const handleEditProduct = (productId: number) => {
     // Implement logic to edit product details
-    console.log(`Editing details of product with ID ${productId}`);
+    navigate(`/product/${productId}/edit`);
   };
 
   const handleDeleteProduct = (productId: number) => {
     // Implement logic to delete product
-    console.log(`Deleting product with ID ${productId}`);
+    setProducts(products.filter(product => product.id !== productId));
   };
 
+  useEffect(() => {
+
+  }, []);
+
   return (
-    <div>
-      <h2>Product Management</h2>
+    <div className="flex">      
       <Sidebar persona="admin" />
-      <ul>
-        {products.map((product) => (
-          <li key={product.id}>
-            <strong>{product.name}</strong> - {product.category} - Starting Price: ${product.startingPrice}
-            <button onClick={() => handleViewProduct(product.id)}>View Product</button>
-            <button onClick={() => handleEditProduct(product.id)}>Edit Product</button>
-            <button onClick={() => handleDeleteProduct(product.id)}>Delete Product</button>
-          </li>
-        ))}
-      </ul>
+      <div className="ml-64 p-8 w-full">
+      <h2 className="text-2xl font-semibold mb-4">Product Management</h2>
+      <div className="overflow-x-auto">
+      <table className="min-w-full bg-white border border-gray-300 shadow-md rounded-md">
+        <thead>
+          <tr>
+            <th className="py-2 px-4 border-b">ID</th>
+            <th className="py-2 px-4 border-b">Name</th>
+            <th className="py-2 px-4 border-b">Category</th>
+            <th className="py-2 px-4 border-b">Starting Price</th>
+            <th className="py-2 px-4 border-b">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {products.map((product) => (
+            <tr key={product.id}>
+              <td className="py-2 px-4 border-b">{product.id}</td>
+              <td className="py-2 px-4 border-b">{product.name}</td>
+              <td className="py-2 px-4 border-b">{product.category}</td>
+              <td className="py-2 px-4 border-b">{product.startingPrice}</td>
+              <td className="py-2 px-4 border-b">
+                {/* Add edit and delete actions here */}
+                <button className="text-blue-500 hover:underline mr-2" onClick={() => handleEditProduct(product.id)}>Edit</button>
+                <button className="text-blue-500 hover:underline mr-2" onClick={() => handleViewProduct(product.id)}>View</button>
+                <button className="text-red-500 hover:underline" onClick={() => handleDeleteProduct(product.id)}>Delete</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    </div>
     </div>
   );
 };

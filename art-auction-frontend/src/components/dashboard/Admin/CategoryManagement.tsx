@@ -28,21 +28,25 @@ const CategoryManagement: React.FC = () => {
   };
 
   return (
-    <div>
-      <h2>Category Management</h2>
+    <div className="flex">      
       <Sidebar persona="admin" />
-      <ul>
+      <div className="ml-64 p-8 w-full">
+      <h2 className="text-2xl font-semibold mb-4">Category Management</h2>
+      <div className="flex flex-wrap gap-4">
         {categories.map((category, index) => (
-          <li key={index}>
+          <div key={index} className="bg-white shadow-md rounded-md p-4">
             <strong>{category}</strong>
-            <button onClick={() => handleEditCategory(index, prompt('Enter updated category', category) || '')}>
+            <div className="mt-2">
+            <button className="mr-2 bg-blue-500 text-white py-1 px-3 rounded-md hover:bg-blue-600" onClick={() => handleEditCategory(index, prompt('Enter updated category', category) || '')}>
               Edit Category
             </button>
-            <button onClick={() => handleDeleteCategory(index)}>Delete Category</button>
-          </li>
+            <button className="bg-red-500 text-white py-1 px-3 rounded-md hover:bg-red-600" onClick={() => handleDeleteCategory(index)}>Delete Category</button>
+            </div>
+          </div>
         ))}
-      </ul>
-      <button onClick={() => handleAddCategory(prompt('Enter new category') || '')}>Add Category</button>
+      <button className="mt-4 bg-green-500 text-white py-1 px-3 rounded-md hover:bg-green-600" onClick={() => handleAddCategory(prompt('Enter new category') || '')}>Add Category</button>
+    </div>
+    </div>
     </div>
   );
 };

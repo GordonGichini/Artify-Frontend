@@ -35,7 +35,6 @@ const NotFound: React.FC = () => {
 const App: React.FC = () => {
   return (
     <Router>
-      <Navbar />
       <Routes>
         <Route path="/" Component={Homepage} />
         <Route path="/login" Component={Login} />
